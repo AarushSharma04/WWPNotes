@@ -1,0 +1,221 @@
+:root {
+    --red: #de3c4b;
+    --purple: #2f131e;
+    --gradient: linear-gradient(to right bottom, #240115, #2f131e);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.home {
+    min-height: 50vh;
+    width: 100vw;
+    padding: 50px;
+    background: var(--red);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    text-align: center;
+    color: var(--purple);
+}
+
+.content h1 {
+    font-size: calc(50px + 1.5vw);
+    text-transform: uppercase;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.content p {
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.title {
+    text-align: center;
+    padding: 15px 30px;
+    display: block;
+    position: relative;
+    margin: 20px auto;
+    width: 400px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 6px solid var(--red);
+    color: var(--red);
+    height: 70px;
+}
+
+.subject {
+    min-height: 60vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(70px, auto);
+    grid-gap: 1em;
+    text-align: center;
+    padding: 40px;
+}
+
+.subject h1 {
+    grid-column: 1/4;
+}
+
+.subject-box {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: .4s all ease;
+}
+
+.subject-box:hover {
+    box-shadow: 0px 1px 10px 6px #ccc;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.subject-box h2 {
+    color: var(--purple);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.subject-box h2::after {
+    display: block;
+    content: ' ';
+    background-color: var(--purple);
+    height: 2px;
+    width: 50px;
+    position: relative;
+    margin: 10px auto 20px auto;
+}
+
+.subject-box a {
+    text-transform: lowercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: var(--red);
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 10px;
+    transition: .4s all ease;
+}
+
+.subject-box a:hover, .subject-box a:focus, .subject-box a:active {
+    border-radius: 20px;
+    background-color: var(--purple);
+}
+
+.gridder {
+    grid-column: 1/4;
+}
+
+@media only screen and (max-width: 1200px) {
+    .subject {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gridder {
+        grid-column: unset;
+    }
+
+    .home {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .subject {
+        grid-template-columns: 1fr;
+    }
+
+    .gridder {
+        grid-column: auto;
+    }
+
+    .home {
+        padding: 10px;
+    }
+
+    .title {
+        border: none;
+    }
+}
+
+.submit {
+    min-height: 20vh;
+    background: var(--purple);
+    padding: 25px 50px;
+    text-align: center;
+}
+
+.submit h1 {
+    color: white;
+    border: 6px solid white;
+    margin: 0 auto 40px auto;
+    position: relative;
+}
+
+.submit p {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px auto;
+}
+
+.submit p span {
+    color: var(--red);
+    margin-left: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--red);
+}
+
+.footer p {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 800px) {
+    .subject p {
+        word-wrap: break-word;
+    }
+}
