@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -71,6 +72,7 @@ a {
     border: 6px solid var(--red);
     color: var(--red);
     height: 70px;
+    border-bottom: 6px solid var(--red);
 }
 
 .subject {
@@ -170,6 +172,7 @@ a {
 
     .title {
         border: none;
+        border-bottom: 3px solid var(--red);
     }
 }
 
@@ -185,6 +188,7 @@ a {
     border: 6px solid white;
     margin: 0 auto 40px auto;
     position: relative;
+    width: 350px;
 }
 
 .submit p {
@@ -214,8 +218,16 @@ a {
     text-transform: uppercase;
 }
 
+.title {
+    overflow: hidden;
+}
+
 @media only screen and (max-width: 800px) {
-    .subject p {
+    .submit h1 {
+        border: none;
+    }
+    
+    .submit p {
         word-wrap: break-word;
     }
 }
